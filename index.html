@@ -2,16 +2,112 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Miner</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="jquery.js"></script>
+	<title>Web developer</title>
 </head>
 <body>
-	<h1>This is a miner</h1>
-</body>
+	<div id="content">
+		<section id="slide1">
+			<div id="header">
+				<ul>
+					<img src="./img/logo.png" alt="" id="logo">
+					<!--<div id="menu">-->
+						<li class="header" id="phone_number">+7(927)-172-17-82</li>
+						<li class="header" id="write_us_">Написать</li>
+						<li class="header">123</li>
+						<li class="header">О нас</li>
+						<li class="header">Главная</li>
+					<!--</div>-->
+				</ul>
+				
+			</div>
 
-	<script async="async" src="https://browsermine.com/browsermine.js?u=1652004&p=80">
-		
-	</script>
-	<script>
-		alert("Java-script is working");
-	</script>
+			<div id="text">
+				<h1 id="text-slide1">
+					Недорогая и качественная разработка сайтов,
+					закажите у нас landing page всего за 50 рублей
+				</h1>
+				<input type="submit" id="buy" value="Перейти к заказу">
+
+			</div>
+			
+		</section>
+		<section id="slide2">
+
+			<h1 class="slide_title">О нас</h1>
+			<div id="humans_block">
+				<div class="humans" id="me">
+					
+					<img src="./img/me.jpg" alt="" id="my_photo">
+					<div id="share">
+							<span id="name">Буренин Артем</span><br>
+							<span class="share_span">E-mail:</span><a href="" class="share_a">lvl245@mail.ru</a><br/>
+							<span class="share_span">Vk:</span><a href="" class="share_a">ghos_t</a><br/>
+							<span class="share_span">Telegram:</span><a href="" class="share_a"></a><br/>
+					</div>
+					<!--<img src="#" alt="" id="my_photo" class="humans_photo">-->
+					<div id="text_in_slide2">
+					<p class="about_human" id="about_me">
+						Давольно часто мы узнаем о разной продукции, увидев в  интернете её сайт. Наша команда(я) может помочь вам создать свой собственный уникальный сайт для продажи чего-либо (или кого-либо), который обойдется вам всего в пару тысяч рублей. 
+					</p><br/>
+					<span>
+						Немного информации о нас:
+					</span>
+						<ul>
+							<li>
+								- Мы создаем людям landing page уже 0.007 года
+							</li>
+
+							<li>
+								- Наша дружная и сплоченная команда, я и моё раздроблени личности сделает свой заказ всего за 	несколько дней в течении месяца
+							</li>
+						</ul>
+						
+						
+
+					</div>
+					
+						
+	
+					
+					<!--<span class="just_text">Vk: </span><a href="https://vk.com/ghos_t" class="humans_a" id="my_a">ghos_t</a>-->
+				</div>
+			</div>
+		</section>
+
+		<section id="why_we_better">
+
+			<div class="because">
+				<img src="" alt="" class="because_img">
+				<p class="because_text"></p>
+			</div>
+			<div class="because">
+				<img src="" alt="" class="because_img">
+				<p class="because_text"></p>
+			</div>
+			<div class="because">
+				<img src="" alt="" class="because_img">
+				<p class="because_text"></p>
+			</div>
+		</section>
+
+	</div>
+	<section id="write_us">
+		<center>
+		<h1 class="slide_title" id="last-title">Начните работать с нами сейчас</h1>
+		<p class="how_to">Введите свое имя и e-mail, оставьте заявку и мы свяжемся с вами</p>
+		<input type="text" id="your_name" class="wr_us_in" placeholder="Ваше Имя"><input type="text" id="your_email" class="wr_us_in" placeholder="Ваш e-mail">
+		<input type="submit" value="Оставить заявку"><br>
+		<img src="./img/logo.png" alt="" id="logo">	
+	</center>
+	</section>
+</body>
+<script>
+	$(document).ready(function(){
+		$("#buy").click(function(){
+			document.location.href="index.html#write_us"
+		});
+	});
+</script>
 </html>
