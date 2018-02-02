@@ -18,6 +18,7 @@
 	font-size:14px;
 	font-family: Lato-Bold,Arial;
 	margin-top: 40px;
+	cursor:pointer;
 
 
 }
@@ -67,6 +68,7 @@
 	margin-top: 150px;
 	margin-bottom: 395px;
 	font-size: 24px;
+	cursor: pointer;
 
 }
 #buy:hover{
@@ -146,8 +148,18 @@
 	max-width: 450px;
 }
 #why_we_better{
-	min-height: 600px;
+	min-height: 400px;
 	
+}
+.because{
+	width:175px;
+	height: 300px;
+	
+	margin-right: 50px;
+	display:inline-block;
+	box-shadow:3px 3px 18px 2px grey;
+
+
 }
 #write_us{
 	padding-top:50px;
@@ -183,6 +195,7 @@ input[type="submit"]{
 #write_us p>{
 
 }
+
 .feed {
  
 
@@ -235,4 +248,13 @@ transform:
 opacity: 1;
 
 
+}
+
+.img_sl2{
+	margin:10px;
+
+}
+.because_text{
+	color:gray;
+	font-size:16px;
 }
