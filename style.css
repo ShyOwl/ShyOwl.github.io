@@ -1,0 +1,184 @@
+*{
+	margin: 0px;
+	padding:0px;
+	font-family: Lato-Bold,Arial;
+	/*box-sizing: border-box;*/
+}
+#content{
+
+}
+.header{
+	list-style-image: none;
+	display: inline;
+	margin:20px;
+
+	float:right;
+	color:#f9f9f9;
+	font-size:14px;
+	font-family: Lato-Bold,Arial;
+	margin-top: 40px;
+
+
+}
+#logo{
+	margin:20px;
+	margin-left: 40px;
+}
+#header{
+	margin-right:  40px;
+	border-bottom:1px solid grey;
+
+}
+/*.header:hover{
+	border-bottom:3px solid #0086ee;
+}*/
+
+#slide1{
+	background-color: rgb(231,231,231,1);
+	background: url("./img/background-slide1.png");
+	background-size: cover;
+	min-height: 700px;
+	width: 100%;
+}
+#write_us_{
+	color:#e54b4b;
+}
+#text{
+	color:#f9f9f9;
+	margin: 50px;
+	margin-bottom: 0px;
+	/*width:900px;*/
+	text-align: center;
+	font-size:35px;
+}
+#buy{
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	border-radius: 30px;
+	border:none;
+	width: 475px;
+	height: 50px;
+	color:white;
+	background: #e54b4b;
+	margin: 100px;
+	margin-top: 150px;
+	margin-bottom: 395px;
+	font-size: 24px;
+
+}
+#buy:hover{
+	background: #9e2f2f;
+}
+
+#slide2{
+	min-height: 600px;
+	
+	font-family: "sans-serif";
+	
+}
+.slide_title{
+	margin: 50px;
+	margin-bottom:30px;
+	font-size:45px;
+
+}
+.about_human{
+	max-width: 400px;
+	
+	/*margin-left:100px;*/
+}
+.about_human>p,ul{
+	display: block;
+}
+
+#text_in_slide2{
+	font-size:15px;
+	color:grey;
+	margin: 100px;
+	max-width:500px;
+}
+#text_in_slide2:first-letter{
+	color:#FF5656;
+	font-size:16px;
+
+}
+#text_in_slide2>ul{
+	list-style-type:none;
+}
+#text_in_slide2 >ul> li:first-letter{
+	color:#FF5656;
+	font-size:24px;
+}
+.share_a{
+	text-decoration: none;
+
+}
+#text_in_slide2{
+	display: inline;
+}
+#share{
+	position: absolute;
+	float:right;
+	margin-left:60%;
+	margin-top: 305px;
+	color:grey;
+	font-size:14px;
+
+}
+
+#my_photo{
+	max-height: 300px;
+	max-width: 300px;
+	float:right;
+	position: absolute;
+	margin-left:60%;
+	margin-bottom: 10px;
+}
+.humans{
+	margin-left:100px;
+	max-width: 430px;
+}
+
+.humans_block{
+	max-width: 450px;
+}
+#why_we_better{
+	min-height: 600px;
+	
+}
+#write_us{
+	padding-top:50px;
+	min-height: 400px;
+	background-image: url("./img/bg.png");
+	background-size: cover;
+
+
+
+}
+.how_to{
+
+	color:lightgray;
+	margin:40px;
+
+}
+#last-title{
+	color:white;
+	font-size:45px;
+}
+.wr_us_in,input[type="submit"]{
+	height: 40px;
+	width: 200px;
+	margin-right: 30px;
+	border-radius: 30px;
+	border:none;
+	margin-bottom:  40px;
+}
+input[type="submit"]{
+	background:#e54b4b;
+	color:white;
+}
+#write_us p>{
+
+}
