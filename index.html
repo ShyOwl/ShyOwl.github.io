@@ -16,7 +16,7 @@
 						<li class="header" id="phone_number">+7(927)-172-17-82</li>
 						<li class="header" id="write_us_">Написать</li>
 						<li class="header">123</li>
-						<li class="header">О нас</li>
+						<li class="header" id="go_about">О нас</li>
 						<li class="header">Главная</li>
 					<!--</div>-->
 				</ul>
@@ -105,9 +105,14 @@
 </body>
 <script>
 	$(document).ready(function(){
+		
 		$("#buy").click(function(){
-			document.location.href="index.html#write_us"
+			document.location.href="index.html#write_us";
 		});
+		$("#go_about").click(function(){
+			document.location.href="index.html#humans_block";
+		});
+		
 	});
 </script>
 </html>
