@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css" type="text/css">
 	<script src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.appear.js">
+</script>
 	<title>Web developer</title>
 </head>
 <body>
 	<div id="content">
-		<section id="slide1">
+		<section id="slide1" class="feed">
 			<div id="header">
 				<ul>
 					<img src="./img/logo.png" alt="" id="logo">
@@ -33,21 +35,21 @@
 			</div>
 			
 		</section>
-		<section id="slide2">
+		<section id="slide2" class="feed">
 
 			<h1 class="slide_title">О нас</h1>
 			<div id="humans_block">
 				<div class="humans" id="me">
 					
 					<img src="./img/me.jpg" alt="" id="my_photo">
-					<div id="share">
+					<div id="share" class="feed">
 							<span id="name">Буренин Артем</span><br>
 							<span class="share_span">E-mail:</span><a href="" class="share_a">lvl245@mail.ru</a><br/>
 							<span class="share_span">Vk:</span><a href="" class="share_a">ghos_t</a><br/>
 							<span class="share_span">Telegram:</span><a href="" class="share_a"></a><br/>
 					</div>
 					<!--<img src="#" alt="" id="my_photo" class="humans_photo">-->
-					<div id="text_in_slide2">
+					<div id="text_in_slide2 feed">
 					<p class="about_human" id="about_me">
 						Давольно часто мы узнаем о разной продукции, увидев в  интернете её сайт. Наша команда(я) может помочь вам создать свой собственный уникальный сайт для продажи чего-либо (или кого-либо), который обойдется вам всего в пару тысяч рублей. 
 					</p><br/>
@@ -76,24 +78,26 @@
 			</div>
 		</section>
 
-		<section id="why_we_better">
-
-			<div class="because">
+		<section id="why_we_better" class="feed">
+			<h1 class="slide_title" >Наши преимущества</h1>
+			<div class="because feed">
 				<img src="" alt="" class="because_img">
-				<p class="because_text"></p>
+				<h5 class="title_better">Дешево</h5>
+				<p class="because_text">Так как мы еще новички, мы делаем сайты гораздо ниже их себестоимости</p>
 			</div>
-			<div class="because">
+			<div class="because feed">
 				<img src="" alt="" class="because_img">
-				<p class="because_text"></p>
+				<h5 class="title_better">Быстро</h5>
+				<p class="because_text">Мы сделаем ваш landing page быстрее, чем вы его у нас закажите</p>
 			</div>
-			<div class="because">
+			<div class="because feed">
 				<img src="" alt="" class="because_img">
 				<p class="because_text"></p>
 			</div>
 		</section>
 
 	</div>
-	<section id="write_us">
+	<section id="write_us" class="feed">
 		<center>
 		<h1 class="slide_title" id="last-title">Начните работать с нами сейчас</h1>
 		<p class="how_to">Введите свое имя и e-mail, оставьте заявку и мы свяжемся с вами</p>
@@ -104,6 +108,16 @@
 	</section>
 </body>
 <script>
+
+  $(function() {
+ 
+    $(document.body).on('appear', '.feed', function(e, $affected) {
+ 
+    $(this).addClass("appeared");
+  });
+  $('.feed').appear({force_process: true});
+ 
+});
 	$(document).ready(function(){
 		$("#buy").click(function(){
 			document.location.href="index.html#write_us"
