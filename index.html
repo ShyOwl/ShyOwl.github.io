@@ -8,6 +8,34 @@
 </script>
 	<title>Web developer</title>
 </head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47546062 = new Ya.Metrika({
+                    id:47546062,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47546062" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <body>
 	<div id="content">
 		<section id="slide1" class="feed">
@@ -15,7 +43,7 @@
 				<ul>
 					<img src="./img/logo.png" alt="" id="logo">
 					<!--<div id="menu">-->
-						<li class="header" id="phone_number">+7(927)-172-17-82</li>
+						<li class="header" id="phone_number">+7(927)-172-12-34</li>
 						<li class="header" id="write_us_">Написать</li>
 						<li class="header">Наши преимущества</li>
 						<li class="header" id="go_about">О нас</li>
@@ -28,7 +56,7 @@
 			<div id="text">
 				<h1 id="text-slide1">
 					Недорогая и качественная разработка сайтов,
-					закажите у нас landing page всего за 50 рублей
+					закажите у нас landing page всего за 2500 рублей
 				</h1>
 				<input type="submit" id="buy" value="Перейти к заказу">
 
@@ -44,25 +72,25 @@
 					<img src="./img/me.jpg" alt="" id="my_photo">
 					<div id="share">
 							<span id="name">Буренин Артем</span><br>
-							<span class="share_span">E-mail:</span><a href="" class="share_a">lvl245@mail.ru</a><br/>
+							<span class="share_span">E-mail:lvl245@mail.ru</span><br/>
 							<span class="share_span">Vk:</span><a href="" class="share_a">ghos_t</a><br/>
 							<span class="share_span">Telegram:</span><a href="" class="share_a"></a><br/>
 					</div>
 					<!--<img src="#" alt="" id="my_photo" class="humans_photo">-->
 					<div id="text_in_slide2">
 					<p class="about_human" id="about_me">
-						Давольно часто мы узнаем о разной продукции, увидев в  интернете её сайт. Наша команда(я) может помочь вам создать свой собственный уникальный сайт для продажи чего-либо (или кого-либо), который обойдется вам всего в пару тысяч рублей. 
+						Давольно часто мы узнаем о разной продукции, увидев в  интернете её сайт. Наша команда может помочь вам создать свой собственный уникальный сайт для продажи чего-либо (или кого-либо), который обойдется вам всего в пару тысяч рублей. 
 					</p><br/>
 					<span>
 						Немного информации о нас:
 					</span>
 						<ul>
 							<li>
-								- Мы создаем людям landing page уже 0.007 года
+								- Мы создаем людям landing page уже 1 год
 							</li>
 
 							<li>
-								- Наша дружная и сплоченная команда, я и моё раздробление личности сделает свой заказ всего за 	несколько дней в течении месяца
+								- Наша дружная и сплоченная команда, я и мои друзья сделаем ваш заказ всего за пару дней.
 							</li>
 						</ul>
 						
@@ -122,6 +150,9 @@
 		});
 		$("#go_about").click(function(){
 			document.location.href="index.html#slide2"
+		});
+		$("#write_us_").click(function(){
+			document.location.href="index.html#write_us"
 		});
 	});
 </script>
