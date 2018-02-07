@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<meta name="viewport" content="width=device-width" />-->
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.appear.js">
+</script>
+	<title>Web developer</title>
+</head>
+
+<body>
+	<div id="content">
+		<div id="burg"><a href="#">
+					<!---<img src="./img/logo.png" alt="" id="logo_mob">-->
+					<span class="bar" id="top"></span>
+					<span class="bar" id="middle"></span>
+					<span class="bar" id="bottom"></span>
+
+				</a></div>
+		<div id="header_mobile">
+				<ul>
+					
+					<!--<div id="menu">-->
+						<li class="header" id="phone_number">+7(927)-172-12-34</li>
+						<li class="header" id="write_us_">Написать</li>
+						<li class="header" id="why_we_better_">Наши преимущества</li>
+						<li class="header" id="go_about">О нас</li>
+						<li class="header">Главная</li>
+					<!--</div>-->
+				</ul>
+				
+				
+			</div>
+		<section id="slide1" class="feed">
+			<div id="header_desktop">
+				<ul>
+					<img src="./img/logo.png" alt="" id="logo">
+					<!--<div id="menu">-->
+						<li class="header" id="phone_number">+7(927)-172-12-34</li>
+						<li class="header" id="write_us_">Написать</li>
+						<li class="header" id="why_we_better_">Наши преимущества</li>
+						<li class="header" id="go_about">О нас</li>
+						<li class="header">Главная</li>
+					<!--</div>-->
+				</ul>
+
+				
+			</div>
+			
+			
+
+			<div id="text">
+				<h1 id="text-slide1">
+					Недорогая и качественная разработка сайтов,
+					закажите у нас landing page всего за 2500 рублей
+				</h1>
+				<input type="submit" id="buy" value="Перейти к заказу">
+
+			</div>
+			
+		</section>
+		<section id="slide2" class="feed">
+
+			<h1 class="slide_title">О нас</h1>
+			<div id="humans_block">
+				<div class="humans" id="me">
+					
+					<img src="./img/me.jpg" alt="" id="my_photo">
+					<div id="share">
+							<span id="name">Буренин Артем</span><br>
+							<span class="share_span">E-mail:lvl245@mail.ru</span><br/>
+							<span class="share_span">Vk:</span><a href="" class="share_a">ghos_t</a><br/>
+							<span class="share_span">Telegram:</span><a href="" class="share_a"></a><br/>
+					</div>
+					<!--<img src="#" alt="" id="my_photo" class="humans_photo">-->
+					<div id="text_in_slide2">
+					<p class="about_human" id="about_me">
+						Давольно часто мы узнаем о разной продукции, увидев в  интернете её сайт. Наша команда может помочь вам создать свой собственный уникальный сайт для продажи чего-либо (или кого-либо), который обойдется вам всего в пару тысяч рублей. 
+					</p><br/>
+					<span>
+						Немного информации о нас:
+					</span>
+						<ul>
+							<li>
+								- Мы создаем людям landing page уже 1 год
+							</li>
+
+							<li>
+								- Наша дружная и сплоченная команда, я и мои друзья сделаем ваш заказ всего за пару дней.
+							</li>
+						</ul>
+						
+						
+
+					</div>
+					
+						
+	
+					
+					<!--<span class="just_text">Vk: </span><a href="https://vk.com/ghos_t" class="humans_a" id="my_a">ghos_t</a>-->
+				</div>
+			</div>
+		</section>
+
+		<section id="why_we_better" class="feed">
+			<h1 class="slide_title">Наши преимущества</h1>
+			<center>
+			<div class="because">
+				<img src="./img/dollar.png" alt="" style="width:50px;height: 80px;" class="img_sl2">
+				<h2 class="title_better">Дешево</h2>
+				<p class="because_text">Так как мы еще новички, мы делаем сайты гораздо ниже их себестоимости</p>
+			</div>
+			<div class="because">
+				<img src="./img/clock.png" alt=""  style="width:80px; height:80px;" class="img_sl2">
+				<h2 class="title_better">Быстро</h2>
+				<p class="because_text">Мы сделаем ваш landing page быстрее, чем вы его у нас закажите</p>
+			</div>
+			</center>
+		</section>
+
+	</div>
+	<section id="write_us" class="feed">
+		<center>
+		<h1 class="slide_title" id="last-title">Начните работать с нами сейчас</h1>
+		<p class="how_to">Введите свое имя и e-mail, оставьте заявку и мы свяжемся с вами</p>
+		<input type="text" id="your_name" class="wr_us_in" placeholder="Ваше Имя"><input type="text" id="your_email" class="wr_us_in" placeholder="Ваш e-mail">
+		<input type="submit" value="Оставить заявку"><br>
+		<img src="./img/logo.png" alt="" id="logo">	
+	</center>
+	</section>
+</body>
+<script>
+	
+	$(function() {
+ 
+    $(document.body).on('appear', '.feed', function(e, $affected) {
+ 
+    $(this).addClass("appeared");
+  });
+  $('.feed').appear({force_process: true});
+ $('#header_mobile').hide();
+ $("#burg").on('click',function(){
+ 	$("#header_mobile").slideToggle();
+ });
+});
+	$(document).ready(function(){
+		$("#buy").click(function(){
+			go_to_element("#write_us");
+		});
+		$("#go_about").click(function(){
+			document.location.href="index.html#slide2";
+		});
+		$("#write_us_").click(function(){
+			document.location.href="index.html#write_us";
+		});
+		$("#why_we_better_").click(function(){
+
+			document.location.href="index.html#why_we_better";
+		});
+	});
+	function go_to_element(click){
+		 // ловим клик по ссылке с классом go_to
+		var scroll_el = $(this).attr('href'); 
+       		if ($(scroll_el).length != 0) { 
+	    		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+	        }
+	    return false; // выключаем стандартное действие
+    };
+	
+
+</script>
+
+
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47546062 = new Ya.Metrika({
+                    id:47546062,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47546062" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</html>
