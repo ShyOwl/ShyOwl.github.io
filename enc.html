@@ -12,6 +12,9 @@
 	body{
 		background: #000;
 	}
+	#range{
+		display: none;
+	}
 </style>
 <script>
 	function opacity(){
@@ -26,14 +29,16 @@
 	}
 </script>
 <body onkeypress="handler()">
-	<input type="range" id="range" oninput="opacity();" value="0">
-	<div id="buttons">
-		<button class="butt" id="b1">1</button>
-		<button class="butt" id="b2">2</button>
-		<button class="butt" id="b3">3</button>
-		<button class="butt" id="b4">4</button>
-	</div>
-	<div id="img"></div>
+	<center>
+		<input type="range" id="range" oninput="opacity();" value="0">
+		<div id="buttons">
+			<button class="butt" id="b1">1</button>
+			<button class="butt" id="b2">2</button>
+			<button class="butt" id="b3">3</button>
+			<button class="butt" id="b4">4</button>
+		</div>
+		<div id="img"></div>
+	</center>
 </body>
 <script>
 	var keycode_array = [];
@@ -41,12 +46,18 @@
 	var button_complete = false;
 	document.onkeydown = handler;
 	function handler (event){
-		//alert(event.keyCode);
+		
+		if (event.keyCode==101){
+			$("#range").css({display:'block'})
+		}
 		if (event.keyCode) {
 			
 			var keycode = event.keyCode;
 			//alert(keycode)
 			keycode_array.push(keycode);
+			if (keycode_array.length>4 ){
+				keycode_array.shift(0);
+			}
 			if (keycode_array.length==4 && button_complete){
 				if( keycode_array[0]==49&&
 					keycode_array[1]==50&&
