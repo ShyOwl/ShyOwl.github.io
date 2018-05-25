@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Oh, Do you see just black screen too?</title>
+	<script src="jquery.js"></script>
+</head>
+<style>
+	#buttons{
+		display: none;
+	}
+	body{
+		background: #000;
+	}
+</style>
+<script>
+	function opacity(){
+		var range = $("#range").val()
+		//alert(range);
+		var op = range/100;
+		if (range>0){
+			$("#buttons").css({display:'block',opacity:op});
+		}else{
+			$("#buttons").css({display:'none',opacity:op});
+		}
+	}
+</script>
+<body onkeypress="handler()">
+	<input type="range" id="range" oninput="opacity();" value="0">
+	<div id="buttons">
+		<button class="butt" id="b1">1</button>
+		<button class="butt" id="b2">2</button>
+		<button class="butt" id="b3">3</button>
+		<button class="butt" id="b4">4</button>
+	</div>
+	<div id="img"></div>
+</body>
+<script>
+	var keycode_array = [];
+	var buttons_array = [];
+	var button_complete = false;
+	document.onkeydown = handler;
+	function handler (event){
+		//alert(event.keyCode);
+		if (event.keyCode) {
+			
+			var keycode = event.keyCode;
+			//alert(keycode)
+			keycode_array.push(keycode);
+			if (keycode_array.length==4 && button_complete){
+				if( keycode_array[0]==49&&
+					keycode_array[1]==50&&
+					keycode_array[2]==51&&
+					keycode_array[3]==52
+				){
+					alert('opened');
+					$("#img").append('<img src="hidden_img.jpg">');
+					keycode_array=[];
+				}
+			}
+		}
+	}
+$(document).ready(function(){
+
+
+
+	function buttons_checker(){
+		if (buttons_array.length==5){
+			if
+			(
+				buttons_array[0]==1 &&
+				buttons_array[1]==2 &&
+				buttons_array[2]==4 &&
+				buttons_array[3]==4 &&
+				buttons_array[4]==3 
+			){
+				button_complete = true;
+				alert('opened')
+			}
+			buttons_array=[];
+		}
+	}
+	$("#b1").click(function(){
+		buttons_array.push(1);
+		buttons_checker();
+	});
+	$("#b2").click(function(){
+		buttons_array.push(2);
+		buttons_checker();
+	});
+	$("#b3").click(function(){
+		buttons_array.push(3);
+		buttons_checker();
+	});
+	$("#b4").click(function(){
+		buttons_array.push(4);
+		buttons_checker();
+	});
+});
+</script>
+</html>

